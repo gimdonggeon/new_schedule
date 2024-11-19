@@ -4,7 +4,6 @@ import com.kdg.schedulewithjpa.dto.CreateScheduleRequestDto;
 import com.kdg.schedulewithjpa.entity.Schedule;
 import com.kdg.schedulewithjpa.entity.User;
 import com.kdg.schedulewithjpa.service.ScheduleService;
-import com.kdg.schedulewithjpa.service.UserService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -19,7 +18,6 @@ import java.util.List;
 public class ScheduleController {
 
     private final ScheduleService scheduleService;
-    private final UserService userService;
 
     @PostMapping("/create")
     public ResponseEntity<Schedule> createSchedule(@RequestBody CreateScheduleRequestDto createScheduleRequestDto, HttpSession session) {
